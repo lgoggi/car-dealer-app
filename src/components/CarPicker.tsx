@@ -12,6 +12,7 @@ export function CarPicker({carsList}: {carsList: ICar[]}) {
   const handleModelChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setCarModel(event.currentTarget.value);
   }
+
   const handleYearChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setCarYear(event.currentTarget.value);
   }
@@ -48,9 +49,9 @@ export function CarPicker({carsList}: {carsList: ICar[]}) {
       </select>
       {
         carModel && carYear ? 
-        <Link  href={`/result/${carModel}/${carYear}`} className="bg-primary px-4 py-2 rounded-xl text-high-contrast font-bold">NEXT</Link>
-        :
-        <div  className="bg-primary opacity-50 px-4 py-2 rounded-xl text-high-contrast font-bold">NEXT</div> 
+          <Link  href={`/result/${carModel}/${carYear}`} className="bg-primary px-4 py-2 rounded-xl text-high-contrast font-bold">NEXT</Link>
+          :
+          <div  className="bg-primary opacity-50 px-4 py-2 rounded-xl text-high-contrast font-bold">NEXT</div> 
       }
     </div>
   )

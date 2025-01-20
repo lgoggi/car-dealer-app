@@ -1,12 +1,10 @@
+import React from "react";
 import { CarsModels } from "@/components/CarsModels";
 
 export default async function Result({ params }: { params: { makeId: string, year: string }}) {
-  // asynchronous access of `params.id`.
   const {makeId, year} = await params;
   const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeIdYear/makeId/${makeId}/modelyear/${year}?format=json`);
   const carsModels = (await response.json()).Results;
-
-  console.log(carsModels);
 
   return (
     <main className="flex items-center justify-center flex-grow flex-col gap-16 p-4">
