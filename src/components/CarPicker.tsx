@@ -1,4 +1,5 @@
 "use client"
+import React from "react";
 import { ICar } from "@/types/types"
 import Link from "next/link";
 import { ChangeEvent, useState } from "react"

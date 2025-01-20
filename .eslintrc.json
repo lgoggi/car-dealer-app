@@ -1,0 +1,20 @@
+{
+  "extends": "next/core-web-vitals",
+  "plugins": ["tailwindcss"],
+      "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true
+        }
+      },
+      "rules": {
+        "tailwindcss/classnames-order": "warn",
+        "tailwindcss/enforces-negative-arbitrary-values": "warn",
+        "tailwindcss/enforces-shorthand": "warn",
+        "tailwindcss/migration-from-tailwind-2": "warn",
+        "tailwindcss/no-arbitrary-value": "off",
+        "tailwindcss/no-custom-classname": "off",
+        "tailwindcss/no-contradicting-classname": "error",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-react": "off"
+      }
+}
